@@ -139,7 +139,10 @@ const Login = () => {
   <GoogleLogin
     onSuccess={handleGoogleLogin}
     onError={(error) => console.error("Google Login Error:", error)}
-    useOneTap
+      useOneTap={false} // Disable One Tap if it's causing issues
+
+      prompt="select_account" // 👈 Forces Google to ask which account to use
+
   />
 </div>
 
